@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+const fatherSlot = () => import('@/views/slot/fatherSlot')
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -9,6 +12,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/fatherSlot',
+    name: 'fatherSlot',
+    component: fatherSlot
   },
   {
     path: '/about',
