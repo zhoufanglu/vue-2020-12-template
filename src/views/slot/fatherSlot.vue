@@ -11,6 +11,17 @@
           我是父组件内容B
         </template>
       </childSlot>
+      <h1>列表测试</h1>
+      <ul>
+        <input type="text" value="">
+        <li style="height: 30px"
+            v-for="(i,index) in list"
+            :key="index"
+            @click="go()"
+        >
+          {{index}}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -21,13 +32,23 @@
     components: {childSlot},
     data() {
       return {
+        list: []
       }
     },
     created() {
+      this.list = new Array(100).fill(1)
+      console.log(31,this.list)
     },
     mounted() {
+
     },
-    methods: {}
+    methods: {
+      go() {
+        console.log(document.documentElement.scrollTop)
+        localStorage.setItem("scroll", document.documentElement.scrollTop)
+        this.$router.push({path: '/'})
+      }
+    }
   }
 </script>
 <style lang="scss" scoped>

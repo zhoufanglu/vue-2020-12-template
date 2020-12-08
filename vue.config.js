@@ -1,4 +1,8 @@
 const path = require('path');
+/**********************骨架屏生成***********************/
+/*const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { SkeletonPlugin } = require('page-skeleton-webpack-plugin')*/
+
 module.exports = {
   /* 部署应用包的基本URL */
   /* baseUrl 从 Vue CLI 3.3 起已弃用 ，请使用publicPath */
@@ -27,6 +31,17 @@ module.exports = {
   // crossorigin: "",
   integrity: false,
   configureWebpack: {
+    /*plugin: [
+      new HtmlWebpackPlugin({
+        // Your HtmlWebpackPlugin config
+      }),
+
+      new SkeletonPlugin({
+        pathname: path.resolve(__dirname, `./src/shell`), // 用来存储 shell 文件的地址
+        staticDir: path.resolve(__dirname, './dist'), // 最好和 `output.path` 相同
+        routes: ['/fatherSlot'], // 将需要生成骨架屏的路由添加到数组中
+      })
+    ],*/
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),

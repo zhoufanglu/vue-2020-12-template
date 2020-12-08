@@ -29,7 +29,15 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  mode: 'hash',
+  routes,
+  scrollBehavior(to, from){
+    if(to.name==='fatherSlot'){
+      console.log("36-rp", localStorage.getItem('scroll'))
+      return {x:0, y: parseInt(localStorage.getItem('scroll'))}
+    }
+    console.log("to",to,"from",from)
+  }
 })
 
 export default router

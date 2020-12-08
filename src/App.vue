@@ -4,9 +4,39 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+   <!-- <keep-alive>
+      <router-view/>
+    </keep-alive>-->
+    <!--<vue-page-stack>
+      <router-view :key="$route.fullPath"></router-view>
+    </vue-page-stack>-->
+    <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'App',
+    data() {
+      return {
+        transitionName: 'forward'
+      };
+    },
+    components: {},
+    created() {},
+    watch: {/*
+      $route(to, from) {
+        if (to.params['stack-key-dir'] === 'forward') {
+          this.transitionName = 'forward';
+        } else {
+          this.transitionName = 'back';
+        }
+      }*/
+    },
+    methods: {}
+  };
+</script>
+
 
 <style lang="scss">
 #app {
@@ -30,3 +60,7 @@
   }
 }
 </style>
+<script>export default {
+  components: {}
+}
+</script>
