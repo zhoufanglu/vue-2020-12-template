@@ -4,13 +4,13 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-   <!-- <keep-alive>
+    <keep-alive :include="['pageA','pageC']">
       <router-view/>
-    </keep-alive>-->
+    </keep-alive>
     <!--<vue-page-stack>
       <router-view :key="$route.fullPath"></router-view>
     </vue-page-stack>-->
-    <router-view :key="$route.fullPath"></router-view>
+    <!--<router-view></router-view>-->
   </div>
 </template>
 

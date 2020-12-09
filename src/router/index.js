@@ -4,6 +4,10 @@ import Home from '../views/Home.vue'
 
 const fatherSlot = () => import('@/views/slot/fatherSlot')
 
+const pageA = () => import('@/views/keepAlive/pageA')
+const pageB = () => import('@/views/keepAlive/pageB')
+const pageC = () => import('@/views/keepAlive/pageC')
+
 
 Vue.use(VueRouter)
 
@@ -11,12 +15,42 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta:{
+      keepAlive:false //需要被缓存的组件
+    },
   },
   {
     path: '/fatherSlot',
     name: 'fatherSlot',
-    component: fatherSlot
+    component: fatherSlot,
+    meta:{
+      keepAlive:false //需要被缓存的组件
+    },
+  },
+  {
+    path: '/pageA',
+    name: 'pageA',
+    component: pageA,
+    meta:{
+      keepAlive:true //需要被缓存的组件
+    },
+  },
+  {
+    path: '/pageB',
+    name: 'pageB',
+    component: pageB,
+    meta:{
+      keepAlive:false //需要被缓存的组件
+    },
+  },
+  {
+    path: '/pageC',
+    name: 'pageC',
+    component: pageC,
+    meta:{
+      keepAlive:false //需要被缓存的组件
+    },
   },
   {
     path: '/about',
@@ -36,7 +70,6 @@ const router = new VueRouter({
       console.log("36-rp", localStorage.getItem('scroll'))
       return {x:0, y: parseInt(localStorage.getItem('scroll'))}
     }
-    console.log("to",to,"from",from)
   }
 })
 

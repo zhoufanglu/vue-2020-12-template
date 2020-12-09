@@ -19,7 +19,8 @@
             :key="index"
             @click="go()"
         >
-          {{index}}
+          <template v-if="index===90"><span style="color: red">{{index}}</span></template>
+          <template v-else>{{index}}</template>
         </li>
       </ul>
     </div>
