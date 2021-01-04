@@ -1,19 +1,9 @@
 # vue-2020-12-template
 
-## Project setup
-```
-npm install
-```
+## 骨架屏
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## swiper
+>垃圾 配置失败
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 轮播 carousel3D
+> carousel3D
