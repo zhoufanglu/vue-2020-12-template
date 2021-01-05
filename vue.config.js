@@ -2,14 +2,14 @@ const path = require('path');
 /**********************骨架屏生成***********************/
 /*const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { SkeletonPlugin } = require('page-skeleton-webpack-plugin')*/
-
 module.exports = {
   /* 部署应用包的基本URL */
   /* baseUrl 从 Vue CLI 3.3 起已弃用 ，请使用publicPath */
   //  baseUrl: process.env.NODE_ENV === "production" ? "./" : "./",
   publicPath: process.env.NODE_ENV === "production" ? "./" : "./",
   /* 生产环境构建文件的目录 defalut: dist */
-  outputDir: "dist",
+  //outputDir: "dist",
+  outputDir: process.env.outputDir,
   /* 放置生成的静态文件目录（js css img） */
   assetsDir: "static",
   /* 指定生成的index.html 输出路径 相对 default: index.html */
