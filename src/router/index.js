@@ -11,6 +11,8 @@ const pageC = () => import('@/views/keepAlive/pageC')
 const swiper = () => import('@/views/swiper')
 const carousel3D = () => import('@/views/carousel3D')
 
+const mixinsPage = () => import('@/views/mixin/mixinsPage')
+
 
 Vue.use(VueRouter)
 
@@ -72,6 +74,11 @@ const routes = [
     path: '/carousel3D',
     name: 'carousel3D',
     component: carousel3D
+  },
+  {
+    path: '/mixinsPage',
+    name: 'mixinsPage',
+    component: mixinsPage
   },
 ]
 
