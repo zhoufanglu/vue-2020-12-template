@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-<!--    <h1>x坐标为 {{x}}</h1>-->
+    <h1>x坐标为 {{x}}</h1>
     <h1 @click="add">count is {{count}}, double is{{double}}</h1>
   </div>
 </template>
@@ -9,7 +9,7 @@
 import Counter from './counter'
 import Mouse from './mouse'
 export default {
-  mixins:[Counter],
+  mixins: [Counter, Mouse],
   data(){
     return{
       count:1,
